@@ -1,0 +1,42 @@
+ Volume in drive C is Windows
+ Volume Serial Number is 9AAB-7196
+
+ Directory of C:\Users\LENOVO\WorkStation\_kahnyuyPrograms\Vernyuy\Sample Sites\vernyuy-clinic-multipage\assets\images
+
+23/11/2026  07:54    <DIR>          .
+21/11/2026  05:49    <DIR>          ..
+23/11/2026  07:54                 0 allimgs.txt
+21/11/2026  05:56         1,426,232 children-feature.jpg
+21/11/2026  06:31         3,204,119 dept-dental.jpg
+21/11/2026  06:14           909,398 dept-general.jpg
+21/11/2026  06:32         1,563,878 dept-laboratory.jpg
+21/11/2026  06:34         2,343,938 dept-nutrition.jpg
+21/11/2026  06:21           883,320 dept-pediatrics.jpg
+21/11/2026  06:33           999,881 dept-preventive.jpg
+21/11/2026  06:24         2,559,672 dept-womens-health.jpg
+21/11/2026  06:00         2,401,955 doctor-1.jpg
+21/11/2026  06:06         3,024,764 doctor-2.jpg
+21/11/2026  06:01         6,678,059 doctor-3.jpg
+21/11/2026  06:07         2,564,323 doctor-4.jpg
+21/11/2026  06:09         1,462,942 doctor-5.jpg
+21/11/2026  06:36         2,881,141 facility-consultation.jpg
+21/11/2026  06:42         1,259,624 facility-laboratory.jpg
+21/11/2026  06:40         2,005,348 facility-pediatric.jpg
+21/11/2026  06:37           895,943 facility-reception.jpg
+21/11/2026  06:43         1,332,862 facility-treatment.jpg
+21/11/2026  06:40         1,709,335 facility-waiting.jpg
+21/11/2026  06:03           504,027 family-adults.jpg
+21/11/2026  05:58         1,383,075 family-children.jpg
+21/11/2026  06:02         1,920,190 family-older-adults.jpg
+21/11/2026  06:04         2,828,928 family-women.jpg
+21/11/2026  05:44         2,005,348 hero-family-care.jpg
+21/11/2026  06:44         2,976,405 resource-1.jpg
+21/11/2026  06:45         2,983,353 resource-2.jpg
+21/11/2026  06:10         5,559,668 team-lead-1.jpg
+21/11/2026  06:10         2,750,455 team-lead-2.jpg
+21/11/2026  06:11         2,948,332 team-nurse-1.jpg
+21/11/2026  06:12         1,926,379 team-nurse-2.jpg
+21/11/2026  06:12         2,991,744 team-nurse-3.jpg
+21/11/2026  05:54           589,329 welcome-clinic.jpg
+              33 File(s)     71,473,967 bytes
+               2 Dir(s)  15,517,540,352 bytes free

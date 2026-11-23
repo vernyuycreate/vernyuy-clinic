@@ -1,0 +1,183 @@
+VERNYUY CLINIC WEBSITE DEMONSTRATION: FEATURE LIST
+===================================================
+Frontend-only, multi-page demo of a multi-specialty clinic in Buea, Cameroon.
+Stack: HTML, CSS, vanilla JavaScript, GSAP + ScrollTrigger (cdnjs). No backend, no build step.
+Made by Vernyuy Services. All records, doctors, staff and testimonials are fictional.
+
+
+1. PAGES (14)
+-------------
+- index.html               Home
+- about.html               About us
+- services.html            Services grouped by need
+- departments.html         Seven departments (anchors #d-general, #d-pediatrics, #d-womens, #d-dental, ...)
+- doctors.html             All doctors, with filtering
+- doctor.html?id=N         Individual doctor profile
+- team.html                Medical leadership, nursing and support staff
+- children.html            Children's care by age group
+- patient-information.html What to expect before, during and after a visit (anchors #pi-0 ... #pi-6)
+- resources.html           Health articles (resources.html?q=title pre-filters)
+- faq.html                 Frequently asked questions with category filter and search
+- contact.html             Contact form
+- appointment.html         Appointment request form (?doctor=N or ?dept=Name pre-selects)
+- admin.html               Admin dashboard demo
+
+Every page has its own header, footer, title and meta description. All links are normal
+links, so Back, refresh, bookmarks and sharing work natively.
+
+
+2. HOME PAGE
+------------
+- Hero with headline, call-to-action buttons and illustrated artwork (or photo)
+- Rotating announcement bar
+- Animated counters (departments, example services)
+- Department marquee and ECG pulse line under the hero
+- "Your health. Your family. Our priority." introduction
+- Little patients section linking to children's care
+- "One place. Care for the whole family." tiles: children, adults, women, older adults
+- Meet our doctors (card preview)
+- "Inside the clinic" draggable carousel with Prev/Next buttons and progress bar
+- Rotating testimonials with Previous/Next controls
+- Health and wellness resources teasers (1 featured + 3 smaller)
+- Common questions preview
+- Booking call-to-action band
+- Vernyuy Services promotion block with WhatsApp links
+
+
+3. DOCTORS, DEPARTMENTS AND TEAM
+--------------------------------
+- Doctor cards with specialty, department and short bio
+- Buttons: "View profile" and "Request appointment" (pre-selects that doctor)
+- Doctor profile page: introduction, sample qualifications, consultation information, department
+- Departments page: services list per department, doctors per department, anchor links
+- Team page: medical leadership, nursing and pediatric care, support staff, laboratory/other teams
+
+
+4. CONTENT AND INFORMATION PAGES
+--------------------------------
+- Services page: example services grouped by category, with who each is for
+- Children's care: age-group rows (infants, toddlers, preschool, school-age, adolescents)
+- Patient information: seven sections with a chip navigation that scrolls to each
+- Resources: article cards, category filter chips, text search, "Read more" expanders
+- FAQ: accordion answers, category chips, search box
+- About page: story, values and team copy
+
+
+5. FORMS
+--------
+Appointment request form (name, email, phone, department, preferred doctor, date, time,
+appointment type, optional note) and contact form (name, email, subject, message).
+- Client-side validation with inline error messages
+- Errors announced to screen readers (aria-live), focus moved to the first problem,
+  shake and fade feedback on error
+- Doctor list narrows to the chosen department
+- Arriving from a doctor or department page pre-fills the form
+- Success screens; nothing is sent anywhere and no medical details are collected
+
+
+6. ADMIN DASHBOARD DEMO (admin.html)
+------------------------------------
+- Overview: totals (all, pending, confirmed, completed), weekly requests bar chart,
+  department breakdown chart, animated figures
+- Appointments: search by patient or department, status filter, Confirm / Complete / Cancel actions
+- Doctors: bookings per doctor and an Available / Away toggle
+- Messages: mark read / unread
+- Settings: theme choice (light or dark) and "Reset demo data"
+
+
+7. THEME
+--------
+- Opens in the light theme by default, regardless of the device's own setting
+- Sun/moon toggle in the header on every page (desktop and mobile)
+- Choice remembered across pages (LocalStorage key "cp-theme"), applied before first
+  paint so there is no flash
+- Smooth colour fade when switching
+- Browser theme-color meta updates with the theme
+- Admin Settings > Appearance stays in sync with the header button
+
+
+8. PHOTO LOADING (js/images.js)
+-------------------------------
+- Photos are picked up automatically from assets/images/ by file name; no code edits
+- Extensions checked: .jpg, .webp, .png, .jpeg
+- Missing files leave the illustrated placeholder in place, so images can be added gradually
+- Photos load lazily as they approach the viewport
+- Descriptive alt text added automatically for doctors and team members
+- Dark gradient added behind text on photo tiles and carousel slides for legibility
+- Supported slots: hero, children feature, family tiles (4), doctors (5), team leads (2),
+  nurses (3), departments (7), clinic facilities (6), resources (8), age groups (5, optional),
+  about-team (optional), testimonial avatars (3, optional)
+- favicon.png replaces the browser icon; social-share.jpg adds an og:image tag
+
+
+9. MOTION AND ANIMATION (GSAP)
+------------------------------
+Core motion (main.js and polish.js):
+- Hero headline words rise out of a mask
+- Staggered scroll reveals for cards and sections
+- Hero artwork parallax on scroll
+- Magnetic buttons on mouse devices
+- Smooth accordion open and close
+- Filter results settle in rather than snap
+- Mobile "Book an appointment" bar slides in after the hero
+- Scroll progress bar and nav shadow on scroll
+- Admin figures count up and charts draw in
+
+Added motion layer (js/fx.js), looping:
+- Drifting colour blobs behind the hero and page headers
+- Radar ring pulsing around the hero artwork
+- Floating hero badges that bob out of sync
+- Heartbeat (lub-dub) on the logo mark
+- Glowing ECG pulse travelling along a line under the hero
+- Department-name marquee that slows on hover
+- Rising "+" crosses in call-to-action bands
+- Light sweep across primary buttons
+- Floating department initials on the departments page
+- Slow breathing zoom on the hero photo once added
+
+Added motion layer, scroll and pointer:
+- Every h2 rises word by word as it scrolls into view
+- Photos fade and zoom in, then drift with scroll parallax
+- 3D card tilt following the mouse on doctor, resource, family and similar cards
+
+Performance and accessibility of motion: loops pause while off-screen; all animation
+is skipped for visitors who prefer reduced motion.
+
+
+10. ACCESSIBILITY AND USABILITY
+-------------------------------
+- Skip-to-content link
+- Semantic landmarks, labelled form fields, aria-live error messages, aria-invalid states
+- aria-expanded on the mobile menu; Escape and outside click close it
+- Visible focus styles on interactive elements
+- Decorative elements are aria-hidden
+- Responsive layout from phone to desktop; safe-area support on notched phones
+- Mobile navigation menu and fixed booking bar
+- Works from a double-click (file://) as well as on a static host
+
+
+11. PRIVACY AND DEMO NOTES
+--------------------------
+- Forms send nothing and collect no medical details; success screens say so
+- Only the theme choice is stored (LocalStorage)
+- Items marked "to be confirmed" (hours, phone, payments, insurance) must be replaced
+  with the real clinic's details before going live
+
+
+12. FILE STRUCTURE
+------------------
+index.html, about.html, services.html, departments.html, doctors.html, doctor.html,
+team.html, children.html, patient-information.html, resources.html, faq.html,
+contact.html, appointment.html, admin.html
+css/style.css     base styles
+css/polish.css    refinements, photo, motion and theme-toggle styles
+js/main.js        data (DOCS, DEPTS, SV, FQ, RC, TL/TN/TB/TS, AP, QT) and per-page rendering
+js/polish.js      titles, focus, accessibility and core GSAP motion
+js/images.js      automatic photo loader
+js/theme.js       light default and dark toggle
+js/fx.js          looping and interactive GSAP effects
+assets/images/    drop photos here (names listed in README.md)
+README.md         setup, image list and editing guide
+
+Where to edit content (js/main.js): DOCS (doctors), DEPTS (departments), SV (services),
+FQ (FAQ), RC (articles), TL/TN/TB/TS (team), AP (admin records), QT (testimonials).
